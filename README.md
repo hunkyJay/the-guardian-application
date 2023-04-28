@@ -11,6 +11,17 @@ A desktop application used with an input API The Guardian and output APIs to sea
 
 * Output API 2: [Reddit](https://www.reddit.com/dev/api)
   A site allows users post text, links or other media information.
+  
+![Welcome](./imgs/welcome.png)
+
+
+![Tag search](./imgs/tag_search.png)
+
+
+![Send QR code](./imgs/send_QRcode_toImgur.png)
+
+
+![Send to reddit](./imgs/send_toReddit.png)
 
 ## Usage
 
@@ -104,3 +115,9 @@ Set your **environment variables** on your PC as follow to make the application 
 
 Code style: Google Java Style Guide
 https://google.github.io/styleguide/javaguide.html
+
+# Contributing
+### Current contributors
+- Renjie He
+
+If you would like to make improvements to the project, please contact us for permission to contribute. Feel free to dive in!
