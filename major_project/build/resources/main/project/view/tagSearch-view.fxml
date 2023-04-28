@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="project.view.TagSearchView"
+            prefHeight="600.0" prefWidth="600.0" fx:id="pane">
+
+    <top>
+        <ImageView fitHeight="80.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@/project/image/tagsearch.png"/>
+            </image>
+            <BorderPane.margin>
+                <Insets top="80.0"/>
+            </BorderPane.margin>
+        </ImageView>
+    </top>
+
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <ProgressIndicator fx:id="progressIndicate" layoutX="20.0" layoutY="60.0" prefHeight="40" visible="false" />
+
+                <ComboBox  fx:id="tagCombo" layoutX="80.0" layoutY="60" prefWidth="360" prefHeight="40" editable="true"
+                           onMouseClicked="#autoComplete" focusTraversable="false" promptText="Please enter a tag to search"/>
+
+                <Button id="searchButton" layoutX="450.0" layoutY="65.0"
+                        mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Search Contents"
+                        onAction="#searchContents"
+                        fx:id="searchButton"/>
+
+                <Label fx:id="currentCredits" layoutX="51.0" layoutY="390.0" prefHeight="42.0" prefWidth="400.0" textFill="#27902b">
+                    <font>
+                        <Font name="Arial Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+
+                <Button id="clearCacheButton" layoutX="460.0" layoutY="400.0"
+                        mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Clear Cache"
+                        onAction="#clearCache"
+                        fx:id="clearCacheButton"/>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
